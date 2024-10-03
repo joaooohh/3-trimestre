@@ -1,8 +1,14 @@
+//Imagine que temos um array de objetos representando
+//pessoas e queremoss encontrar a pessoa com um nome específico.
 const people = [
-    { name: 'Sthéfanie', age: '18' },
-    { name: 'Dheni', age: '19' },
-    { name: 'Pedro', age: '20'}
-];
+    { name: 'Alice', age: 25},
+    { name: 'Bob', age: 30 },
+    { name: 'Charlie', age: 35 } 
 
-const person = people.find(person => person.name === 'Dheni');
-console.log(person)
+];
+//Encontrar a pessoa com o nome 'Bob'
+//const person = people.find(person => person.name === 'Bob');
+const person = people.find ((person)=>{
+    return person.name === 'Bob'
+});
+console.log(person);//{name: 'Bob', age: 30}
